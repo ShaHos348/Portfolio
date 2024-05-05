@@ -1,11 +1,11 @@
-section {
+#about-section {
     display: flex;
     justify-content: center;
     border: 10px;
     border-color: aliceblue;
 }
 
-p {
+#about-p {
     color: rgb(132, 0, 255);
     width: 50%;
     margin-top: auto;
@@ -14,7 +14,7 @@ p {
     font: normal normal 25px/1 "proxima-nova";
 }
 
-img {
+#about-img {
     border-radius: 100%;
     width: 20%;
 }

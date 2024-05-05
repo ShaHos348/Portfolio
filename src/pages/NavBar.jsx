@@ -24,15 +24,15 @@ function NavBar() {
   };
 
   return (
-    <AppBar ref={appBarRef} className="app-bar">
-      <Container className="container">
-        <Toolbar className="toolbar">
-          <Box className="box">
+    <AppBar ref={appBarRef} id="nav-app-bar">
+      <Container id="nav-container">
+        <Toolbar id="nav-toolbar">
+          <Box id="nav-box">
             {pages.map((page, index) => (
               <Button
                 key={index}
                 onClick={() => navigateToPage(page)}
-                className="button"
+                className="nav-button"
               >
                 {page}
               </Button>
