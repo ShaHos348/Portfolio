@@ -13,24 +13,26 @@ function NavBar() {
   const appBarRef = useRef(null);
 
   const navigateToPage = (page) => {
-    const section = document.getElementById(page.toLowerCase().replace(/\s+/g, '-'));
+    const section = document.getElementById(
+      page.toLowerCase().replace(/\s+/g, "-")
+    );
     if (section) {
-      const navbarHeight = appBarRef.current.offsetHeight; 
-      const sectionPosition = section.offsetTop - navbarHeight; 
-      window.scrollTo({ top: sectionPosition, behavior: 'smooth' }); 
+      const navbarHeight = appBarRef.current.offsetHeight;
+      const sectionPosition = section.offsetTop - navbarHeight;
+      window.scrollTo({ top: sectionPosition, behavior: "smooth" });
     }
   };
 
   return (
-    <AppBar ref={appBarRef} className="app-bar"> 
-      <Container className="container"> 
+    <AppBar ref={appBarRef} className="app-bar">
+      <Container className="container">
         <Toolbar className="toolbar">
           <Box className="box">
             {pages.map((page, index) => (
               <Button
                 key={index}
                 onClick={() => navigateToPage(page)}
-                className="button" 
+                className="button"
               >
                 {page}
               </Button>
@@ -41,6 +43,5 @@ function NavBar() {
     </AppBar>
   );
 }
-
 
 export default NavBar;
