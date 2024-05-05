@@ -1,0 +1,42 @@
+.app-bar {
+  position: fixed;
+  opacity: 50%;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.toolbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.button {
+  background-color: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0 10px !important;
+  position: relative !important;
+  font-weight: bold !important;
+  color: lime !important;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.button:not(:last-child)::after {
+  content: "|" !important;
+  position: absolute !important;
+  right: -5px !important;
+  color: white !important;
+}
+
+.box {
+  display: flex !important;
+  justify-content: flex-end !important;
+  flex-grow: 1 !important;
+}
