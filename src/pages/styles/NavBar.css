@@ -1,20 +1,20 @@
-.app-bar {
+#nav-app-bar {
   position: fixed;
   opacity: 50%;
 }
 
-.container {
+#nav-container {
   width: 100% !important;
   max-width: 100% !important;
 }
 
-.toolbar {
+#nav-toolbar {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
 }
 
-.button {
+.nav-button {
   background-color: transparent !important;
   border: none !important;
   cursor: pointer !important;
@@ -24,18 +24,18 @@
   color: lime !important;
 }
 
-.button:hover {
+.nav-button:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.button:not(:last-child)::after {
+.nav-button:not(:last-child)::after {
   content: "|" !important;
   position: absolute !important;
   right: -5px !important;
   color: white !important;
 }
 
-.box {
+#nav-box {
   display: flex !important;
   justify-content: flex-end !important;
   flex-grow: 1 !important;

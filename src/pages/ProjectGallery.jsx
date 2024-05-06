@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { makeStyles } from '@material-ui/core/styles';
 import Multiselect from 'multiselect-react-dropdown';
+import projectData from './data/projectData'; // Import projectData array
 
 const useStyles = makeStyles((theme) => ({
   searchBar: {
@@ -25,64 +26,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ProjectGallery = () => {
-  const [projects, setProjects] = useState([]);
   const [searchQuery, setSearchQuery] = useState(''); // State variable for search query
-
-  const [contributors, setContributors] = useState([]);
   const [selectedContributors, setSelectedContributors] = useState([]);
-
-  const usernames = [
-    'nimitadeshpande',
-    'ShaHos348'
-  ];
-
   const classes = useStyles();
-
-  useEffect(() => {
-    fetch("http://localhost:3001/projects", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setProjects(data);
-        console.log("Projects inside useEffect");
-        console.log(projects);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/users", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setContributors(data);
-        console.log("Contributors inside useEffect");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
-  console.log(contributors);
-  console.log(usernames);
 
   const handleContributorChange = (selectedList, selectedItem) => {
     // Set the selected contributors when a change occurs
@@ -90,21 +36,15 @@ const ProjectGallery = () => {
   };
 
   // Filter projects based on the searchQuery
-  const filteredProjects = projects.filter((project) => {
-    // Check if project.projectTitle and searchQuery are defined before applying toLowerCase
+  const filteredProjects = projectData.filter((project) => {
+    // Check if project.name and searchQuery are defined before applying toLowerCase
     return (
-      ((project.projectTitle &&
-        project.projectTitle.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      ((project.name &&
+        project.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
         (project.description &&
           project.description.toLowerCase().includes(searchQuery.toLowerCase()))) &&
       (!selectedContributors.length || // Check if any contributors are selected
-        usernames.some((currUsername) => {
-          selectedContributors.includes(currUsername);
-          console.log(currUsername);
-          console.log(selectedContributors);
-        }
-          
-        ))
+        selectedContributors.some((contributor) => project.attributes.some(attr => attr.username === contributor)))
     );
   });
 
@@ -123,7 +63,7 @@ const ProjectGallery = () => {
     <div>
       <div className={classes.searchContainer}>
       <Multiselect
-          options={contributors}
+          options={[]} // Pass contributors array here if needed
           onSelect={handleContributorChange}
           onRemove={handleContributorChange}
           displayValue="username"
@@ -144,7 +84,7 @@ const ProjectGallery = () => {
       >
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
-            <ProjectCard key={project._id} project={project} />
+            <ProjectCard key={project.id} project={project} />
           ))
         ) : (
           <p>No projects found.</p>

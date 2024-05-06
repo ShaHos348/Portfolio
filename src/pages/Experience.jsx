@@ -18,16 +18,16 @@ const Experience = () => {
 
   return (
     <div id="experience">
-      <h1>Experience</h1>
+      <h1 className="section-header">Experience</h1>
       <VerticalTimeline>
         {timelineData.map((element) => {
           let isWorkIcon = element.icon === "work";
 
           return (
             <VerticalTimelineElement
-              key={element.key}
+              key={element.id}
               date={element.date}
-              dateClassName="date"
+              dateClassName="timeline-date"
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
               icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
             >

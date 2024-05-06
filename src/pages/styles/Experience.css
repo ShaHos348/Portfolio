@@ -1,5 +1,6 @@
-body .date {
+body .timeline-date {
   text-align: left;
+  color: rgb(255, 0, 0);
 }
 
 .title {
@@ -10,7 +11,7 @@ body .date {
     color: orangered;
 }
 
-h3 {
+.vertical-timeline-element-title {
   padding-top: 0.25em;
 }
 
@@ -18,8 +19,4 @@ h3 {
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
   padding: 2em 3em !important;
-}
-
-.date {
-  color: rgb(255, 0, 0);
 }

@@ -1,0 +1,64 @@
+.project-card {
+  position: relative; /* Ensure relative positioning for absolute positioning of CardContent */
+  height: 270px;
+  max-width: 480px;
+  flex-basis: 500px;
+}
+
+.project-card-media {
+  height: 100%; /* Cover the entire height of the card */
+  width: 100%; /* Cover the entire width of the card */
+  object-fit: fill; /* Ensure the image covers the entire area without distortion */
+}
+
+.project-card-content {
+  position: absolute; /* Position the CardContent absolutely */
+  bottom: 0; /* Align CardContent to the bottom of the card */
+  left: 0; /* Align CardContent to the left of the card */
+  right: 0; /* Align CardContent to the right of the card */
+  padding: 16px; /* Add padding to CardContent for better readability */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent background for CardContent */
+  transition: opacity 0.3s ease; /* Add transition effect for opacity */
+  opacity: 0; /* Hide CardContent by default */
+}
+
+.project-card-name {
+  color: red;
+  font-style:italic;
+  font-weight: bolder !important;
+}
+
+.project-card-description {
+  color: green;
+
+}
+
+.project-card:hover .project-card-content {
+  opacity: 1; /* Show CardContent on hover */
+}
+
+.project-attributes-container {
+  display: flex;
+  align-items: center;
+}
+
+.project-attributes:not(:last-child)::after {
+  content: " |";
+  margin-right: 8px;
+  color: gray; /* Adjust color of the separator */
+}
+
+.project-languages {
+  display: flex ;
+  margin-left: auto;
+  
+}
+
+.project-language {
+  margin-right: 8px !important;
+}
