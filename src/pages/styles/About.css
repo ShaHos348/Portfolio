@@ -13,7 +13,7 @@
 }
 
 #about-p {
-    color: rgb(132, 0, 255);
+    color: rgb(43, 255, 0);
     font: normal normal 25px/1 "proxima-nova";
 }
 
@@ -29,5 +29,8 @@
 
 #about-img {
     border-radius: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
     width: 20%;
+    height: fit-content;
 }
