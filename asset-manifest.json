@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8c7cd84d.css",
+    "main.js": "/static/js/main.85e717a2.js",
+    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "static/media/TimeWarpScreen.png": "/static/media/TimeWarpScreen.ee63e407276574b1cf4b.png",
+    "static/media/UGAMarketPlaceScreen.png": "/static/media/UGAMarketPlaceScreen.6d3ab4ca656b6556aa08.png",
+    "static/media/pfp.jpg": "/static/media/pfp.f739287f4771ca7b6630.jpg",
+    "static/media/GitHubIcon.png": "/static/media/GitHubIcon.51aa851604d1704cecb9.png",
+    "static/media/SpaceInvadersScreen.png": "/static/media/SpaceInvadersScreen.004b86f3abec92680732.png",
+    "static/media/Shahbin_Hossain_s_Resume.pdf": "/static/media/Shahbin_Hossain_s_Resume.3e475e802563d91f455d.pdf",
+    "static/media/CosmicCrawlersScreen.png": "/static/media/CosmicCrawlersScreen.8ce489b6050cd60d5093.png",
+    "static/media/LinkedInIcon.png": "/static/media/LinkedInIcon.7be9d342e7a1a0691a1e.png",
+    "static/media/JuniorMarketScreen.png": "/static/media/JuniorMarketScreen.3ec5f5ecce6665516d8f.png",
+    "static/media/GmailIcon.png": "/static/media/GmailIcon.ec9e27ad3186e57b2a87.png",
+    "static/media/school.svg": "/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
+    "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
+    "index.html": "/index.html",
+    "main.8c7cd84d.css.map": "/static/css/main.8c7cd84d.css.map",
+    "main.85e717a2.js.map": "/static/js/main.85e717a2.js.map",
+    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c7cd84d.css",
+    "static/js/main.85e717a2.js"
+  ]
+}
