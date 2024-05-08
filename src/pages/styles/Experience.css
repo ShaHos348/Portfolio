@@ -1,7 +1,7 @@
-body .timeline-date {
+.timeline-date {
   text-align: left;
   color: rgb(0, 255, 0);
-  font-weight:bolder !important;
+  font-weight: bolder !important;
   font-size: large !important;
 }
 
@@ -10,7 +10,7 @@ body .timeline-date {
 }
 
 .etitle {
-    color: orangered;
+  color: orangered;
 }
 
 .vertical-timeline-element-title {
@@ -21,4 +21,38 @@ body .timeline-date {
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
   padding: 2em 3em !important;
+}
+
+.timeline-description,
+li {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  list-style-type: disclosure-closed;
+}
+
+.timeline-description-button {
+  display: none; /* Button initially hidden */
+  margin-top: 5%;
+  background: transparent;
+  border: none;
+  color: rgb(76, 114, 19);
+  text-decoration:wavy underline overline;
+  width: 75%;
+}
+
+/* Show button and hide description on screens larger than 768px */
+@media (max-width: 700px) {
+  .timeline-description-button {
+    display: inline-block; /* Button initially hidden on larger screens */
+  }
+
+  .timeline-date {
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+    text-align: center;
+    font-size: 3vw !important;
+    color: purple;
+  }
 }

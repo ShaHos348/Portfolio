@@ -10,9 +10,16 @@
   margin-right: 5%;
 }
 
+#about-h {
+  color: rgb(208, 255, 0);
+  font-size: 2.5vw;
+  font-style: italic;
+}
+
 #about-p {
   color: rgb(43, 255, 0);
-  font: normal normal 25px/1 "proxima-nova";
+  font: normal italic 25px/1 "proxima-nova";
+  margin-bottom: 50px;
 }
 
 #resume-button {
@@ -44,6 +51,17 @@
     margin-right: auto;
     margin-top: 0;
     text-align: center; /* Center the text within the left column */
+  }
+
+  #about-h {
+    color: rgb(208, 255, 0);
+    font-size: 7.5vw;
+    font-style: italic;
+  }
+
+  #about-p {
+    font-size: small;
+    font-style: normal;
   }
 
   #about-img {

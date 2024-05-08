@@ -26,7 +26,7 @@ let projectData = [
   {
     id: 2,
     name: "Time Warp",
-    attributes: { languages: ["C"], IDE: "Unity", Type: "Game" },
+    attributes: { languages: ["C#"], IDE: "Unity", Type: "Game" },
     description:
       "Time Warp is a 2D platformer with the concept of traveling through different periods of time.",
     imageUrl: "TimeWarpScreen.png",
