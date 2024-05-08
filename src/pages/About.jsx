@@ -8,16 +8,14 @@ const About = () => {
 
   useEffect(() => {
     const component1 = document.querySelector('#nav-app-bar');
-    const component2 = document.querySelector('.section-header');
-    if (component1 && component2) {
-      setComponentHeight(component1.offsetHeight + component2.offsetHeight);
+    if (component1) {
+      setComponentHeight(component1.offsetHeight);
     }
   }, []);
 
   return (
-    <div id="about-me">
-      <h1 className="section-header">About Me</h1>
-      <div id="about-section" style={{ height: `calc(100vh - ${componentHeight}px)` }}>
+    <div id="about-me" className="section">
+      <div id="about-section" style={{ height: `calc(100vh - ${componentHeight}px)`, marginTop: `calc(${componentHeight}px)`}}>
         <div id="about-left-column">
           <p id="about-p">
             Hello, My name is Shahbin (Sha) Hossain. I am a CS Major @ GaTech. 

@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import "./styles/NavBar.css";
 
-const pages = ["About Me", "Experience", "Projects", "Contact Me"];
+const pages = ["Top", "Experience", "Projects", "Links"];
 
 function NavBar() {
   const appBarRef = useRef(null);
@@ -24,7 +24,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar ref={appBarRef} id="nav-app-bar">
+    <AppBar ref={appBarRef} id="nav-app-bar" className="section">
       <Container id="nav-container">
         <Toolbar id="nav-toolbar">
           <Box id="nav-box">

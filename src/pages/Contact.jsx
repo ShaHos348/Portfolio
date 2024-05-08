@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact-me">
+    <div id="contact-me" className="section">
       <h1 className="section-header">Contact Me</h1>
       <div className="contact-container">
         {contactData.map((contact, index) => (
