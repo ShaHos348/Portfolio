@@ -8,22 +8,23 @@ const About = () => {
 
   useEffect(() => {
     const component1 = document.querySelector('#nav-app-bar');
-    const component2 = document.querySelector('.section-header');
-    if (component1 && component2) {
-      setComponentHeight(component1.offsetHeight + component2.offsetHeight);
+    if (component1) {
+      setComponentHeight(component1.offsetHeight);
     }
   }, []);
 
   return (
-    <div id="about-me">
-      <h1 className="section-header">About Me</h1>
-      <div id="about-section" style={{ height: `calc(100vh - ${componentHeight}px)` }}>
+    <div id="top" className="section">
+      <div id="about-section" style={{ height: `calc(100vh - ${componentHeight}px)`, marginTop: `calc(${componentHeight}px)`}}>
         <div id="about-left-column">
-          <p id="about-p">
-            Hello, My name is Shahbin (Sha) Hossain. I am a CS Major @ GaTech. 
-            I have done both web-development as well as game development in the past. 
-            Welcome to my portfolio website.
+          <div>
+            <h1 id="about-h">Shahbin (SHA) Hossain</h1>
+            <p id="about-p">
+            Interests in Web-Dev, Frontend, Backend, any SWE really. <br />
+            Welcome to my portfolio website {'=]'}
           </p>
+          </div>
+          
           <a id="resume-button" href = {resume} target = "_blank"  rel="noopener noreferrer">Resume</a>
         </div>
         <img id="about-img" src={pfp} alt="Profile" />

@@ -6,9 +6,9 @@ body {
     rgb(0, 0, 0) 100%
   );*/
   background-image: radial-gradient(
-    farthest-corner at 40px 40px,
-    rgb(94, 0, 0) 0%,
-    #43e 100%
+    circle at 75% 7.5%,
+    rgb(45, 0, 150) 0%,
+    rgb(0, 0, 0) 25%
   );
   background-blend-mode: normal;
   width: 100%;
@@ -24,4 +24,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: radial-gradient(
+      circle at 50% 10%,
+      rgb(45, 0, 150) 0%,
+      rgb(0, 0, 0) 20%
+  );
+  }
 }
